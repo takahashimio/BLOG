@@ -331,3 +331,111 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+
+
+/* 追加分 */
+
+/* 基本 */
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+
+
+/* ヘッダー */
+.header .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 134px;
+	text-align: center;
+}
+
+.nav ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin-top: 18px;
+	color: #477294;
+}
+
+.nav li:not(:last-child) {
+	margin-right: 55px;
+}
+
+@media (min-width: 768px) {
+	.nav ul {
+		margin-top: 0;
+	}
+	.header .container {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 100px;
+	}
+}
+
+
+/* フッター */
+.footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	color: #fff;
+    background-image: none;
+    background-size: cover;
+    background-color: #477294;
+}
+
+.footer .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer .site {
+	text-align: center;
+}
+.footer .site p {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font-size: 14px;
+}
+
+@media (min-width: 768px) {
+	.footer {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+	.footer .container {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.footer .site {
+		text-align: left;
+	}
+	.footer .site p {
+		margin-top: 10px;
+		margin-bottom: 0;
+		font-size: 18px;
+	}
+}
+
+
+
+/* SNSメニュー */
+.sns {
+	display: flex;
+	list-style: none;
+	font-size: 40px;
+}
+
+.sns li:not(:last-child) {
+	margin-right: 30px;
+}

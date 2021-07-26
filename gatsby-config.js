@@ -1,12 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `HYGGEY`,
+    description: `心と暮らすシンプルライフ`,
+    siteUrl: `https://hyggey.jp`,
     author: {
       name: `MIO`,
     },
-    description: `心と暮らすシンプルライフ`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -121,6 +120,7 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
