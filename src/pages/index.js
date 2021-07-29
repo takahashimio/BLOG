@@ -5,14 +5,16 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
 return (
-  <Layout location={location} title={siteTitle}>
+  <Layout>
     <Seo title="All posts" />
     <Bio />
+    
     <ol style={{ listStyle: `none` }}>
       {posts.map(post => {
         const title = post.frontmatter.title || post.fields.slug
@@ -65,7 +67,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY.MM.DD")
           title
           description
         }

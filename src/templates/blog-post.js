@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -22,6 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <Bio />
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
@@ -30,9 +32,6 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -83,7 +82,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY.MM.DD")
         description
       }
     }
@@ -103,5 +102,7 @@ export const pageQuery = graphql`
         title
       }
     }
+
+    
   }
 `
